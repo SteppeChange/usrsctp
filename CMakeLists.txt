@@ -122,12 +122,12 @@ endif ()
 # CHECK STRUCT MEMBERS
 #################################################
 
-set(CMAKE_REQUIRED_INCLUDES "${CMAKE_SOURCE_DIR}/usrsctplib")
+##set(CMAKE_REQUIRED_INCLUDES "${CMAKE_SOURCE_DIR}/usrsctplib")
 
-check_include_file(usrsctp.h have_usrsctp_h)
-if (NOT have_usrsctp_h)
-	message(FATAL_ERROR "usrsctp.h not found")
-endif ()
+##check_include_file(usrsctp.h have_usrsctp_h)
+##if (NOT have_usrsctp_h)
+##	message(FATAL_ERROR "usrsctp.h not found")
+##endif ()
 
 check_struct_has_member("struct sockaddr" "sa_len" "sys/types.h;sys/socket.h" have_sa_len)
 if (have_sa_len)
